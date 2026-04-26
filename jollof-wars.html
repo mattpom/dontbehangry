@@ -70,6 +70,21 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:2.5rem 
 footer p{font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--stone)}
 footer a{color:var(--saffron);text-decoration:none}
 @media(max-width:900px){nav{padding:1rem 1.5rem}.nav-links{display:none}.nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#0a0806;border-bottom:1px solid var(--border);padding:1.5rem;gap:1rem;z-index:200}.hamburger{display:flex}.page-hero{padding:5rem 1.5rem 3rem}.main{padding:2.5rem 1.5rem}.card-grid{grid-template-columns:1fr}.article-row{flex-direction:column;align-items:flex-start}.submit-block{padding:3rem 1.5rem}footer{flex-direction:column;text-align:center;padding:2rem 1.5rem}}
+
+<style>
+.product-strip{border-top:1px solid rgba(232,160,32,0.18);padding-top:3rem;margin-top:3rem}
+.product-strip-label{font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(232,160,32,0.7);margin-bottom:1.2rem;display:flex;align-items:center;gap:1rem}
+.product-strip-label::after{content:'';flex:1;height:1px;background:rgba(232,160,32,0.15)}
+.product-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(232,160,32,0.15);border:1px solid rgba(232,160,32,0.15);margin-bottom:0.8rem}
+.prod-card{background:#111009;padding:1.5rem;text-decoration:none;display:flex;flex-direction:column;gap:0.5rem;transition:background 0.2s}
+.prod-card:hover{background:#161410}
+.prod-cat{font-family:'DM Mono',monospace;font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:#e8a020}
+.prod-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#f7f4ee;line-height:1.2}
+.prod-desc{font-size:0.78rem;color:rgba(247,244,238,0.45);line-height:1.65;font-weight:300;flex:1}
+.prod-cta{font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:#e8a020;margin-top:0.3rem}
+.aff-note{font-size:0.65rem;color:rgba(247,244,238,0.25);font-style:italic}
+@media(max-width:768px){.product-grid-3{grid-template-columns:1fr}}
+</style>
 </style>
 <style>
 .a-meta{display:flex;gap:1.5rem;align-items:center;font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--stone)}
@@ -130,6 +145,31 @@ footer a{color:var(--saffron);text-decoration:none}
 <p>The Jollof Wars are funny. The memes are excellent. The passion is disproportionate in a way that makes people who don't have a stake in it smile. But underneath the humor is something real: West African food cultures have been systematically underrepresented, misrepresented, or ignored by the global food media for most of its existence. The Jollof Wars forced a global conversation about a regional food culture entirely on that culture's own terms. No Western chef, no fusion restaurant, no travel magazine made it happen. It happened because people who grew up eating the dish cared enough to argue about it in public.</p>
 <p>The argument also forced a more nuanced understanding of West African food geography onto an audience that had previously flattened the entire continent into a single undifferentiated category. The differences between Nigerian, Ghanaian, and Senegalese jollof are real, specific, and meaningful — and the debate made those differences visible to people who had never considered them. That is not a small thing. That is how cuisines earn the serious attention they deserve.</p>
 
+
+<div class="product-strip">
+  <div class="product-strip-label">West African Pantry</div>
+  <div class="product-grid-3">
+      <a href="https://www.amazon.com/s?k=west+african+cookbook+nigeria+ghana&tag=dontbehangry-20" target="_blank" rel="noopener sponsored" class="prod-card">
+        <span class="prod-cat">Books</span>
+        <span class="prod-name">West African Cookbook</span>
+        <span class="prod-desc">The food culture behind the argument. Nigerian, Ghanaian, and Senegalese cooking explored with the depth the Jollof Wars deserve.</span>
+        <span class="prod-cta">Explore →</span>
+      </a>
+      <a href="https://www.amazon.com/s?k=tomato+paste+canned+san+marzano&tag=dontbehangry-20" target="_blank" rel="noopener sponsored" class="prod-card">
+        <span class="prod-cat">Ingredient</span>
+        <span class="prod-name">Premium Tomato Paste</span>
+        <span class="prod-desc">The base of every jollof. Quality tomato paste makes a measurable difference — this is where the dish's depth comes from.</span>
+        <span class="prod-cta">Explore →</span>
+      </a>
+      <a href="https://www.amazon.com/s?k=heavy+bottom+pot+dutch+oven+rice&tag=dontbehangry-20" target="_blank" rel="noopener sponsored" class="prod-card">
+        <span class="prod-cat">Cookware</span>
+        <span class="prod-name">Heavy-Bottom Rice Pot</span>
+        <span class="prod-desc">Party jollof gets its smoke from a proper heavy-bottom pot over high heat. The right equipment makes the dish possible.</span>
+        <span class="prod-cta">Explore →</span>
+      </a>
+  </div>
+  <p class="aff-note">Affiliate links — we earn a small commission at no extra cost to you.</p>
+</div>
 <div style="border-top:1px solid var(--border);padding-top:2rem;margin-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
   <a href="stories.html" style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--saffron);text-decoration:none">← All Stories</a>
   <a href="submit.html" style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--stone);text-decoration:none">Know a story like this? Submit it →</a>
@@ -137,7 +177,7 @@ footer a{color:var(--saffron);text-decoration:none}
 </div>
 <footer>
   <div class="footer-logo">Don't Be <em>Hangry</em></div>
-  <p>© 2026 <a href="index.html">DontBeHangry.com</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="about.html">About</a> · <a href="https://x.com/dontbehangry" target="_blank" rel="noopener">𝕏 Follow</a></p>
+  <p>© 2026 <a href="index.html">DontBeHangry.com</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="affiliate.html">Affiliate</a> · <a href="about.html">About</a> · <a href="https://x.com/dontbehangry" target="_blank" rel="noopener">𝕏 Follow</a></p>
 </footer>
 <script>document.querySelector('.hamburger').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));</script>
 </body>
