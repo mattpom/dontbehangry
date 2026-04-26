@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://dontbehangry.com/about.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/ceviche-truth.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dontbehangry.com/dashi-built-a-cuisine.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dontbehangry.com/index.html</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://dontbehangry.com/ingredients.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/jollof-wars.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/markets.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/nixtamalization.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dontbehangry.com/privacy.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/region-africa.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/region-east-asia.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/region-europe.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/region-latin-america.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/region-mediterranean.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/region-middle-east.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/region-south-asia.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/region-southeast-asia.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/regions.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/spice-route.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/stories.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/submit.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/techniques.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
