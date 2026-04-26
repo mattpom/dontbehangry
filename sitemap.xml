@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://dontbehangry.com/404.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dontbehangry.com/about.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dontbehangry.com/ceviche-truth.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dontbehangry.com/dashi-built-a-cuisine.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -22,4 +23,5 @@
   <url><loc>https://dontbehangry.com/stories.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dontbehangry.com/submit.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dontbehangry.com/techniques.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/terms.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
