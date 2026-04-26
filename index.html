@@ -296,8 +296,10 @@ footer a{color:var(--saffron);text-decoration:none}
   <div class="tagline">The Hangry Dispatch</div>
   <h2>The Hangry <em>Dispatch.</em></h2>
   <p>A newsletter about the world's food cultures — delivered when there's something worth saying. No filler. No recipes. No "5 Foods You Must Try Before You Die." Just stories. Free forever.</p>
-  <form class="email-form" onsubmit="event.preventDefault();this.innerHTML='<p style=&quot;color:var(--saffron);font-family:DM Mono,monospace;font-size:0.85rem;padding:0.9rem 0&quot;>You&apos;re on the list. Don&apos;t be hangry.</p>'">
-    <input type="email" placeholder="your@email.com" required autocomplete="email">
+  <form class="email-form" action="https://179420ee.sibforms.com/serve/MUIFAJTIiPSQGOqXdaPQNQMqDuMIKnnvhsS8x_-aD4JMkftCOx8hqGGk7mQJZlBobLmwjvRG312EVIaqaojHA66NRwzWPxvzLYAadzflbD6sB00fL4tldZD6l06OGh1Ppg4w6EbETou8seJGgt4Ikj0JtTwVujtk6zBcLSonNJ1sjsUuEPiZojsA4oxoMbqrrUzW5k-smIG5flCmtg==" method="POST" target="_blank">
+    <input type="email" name="EMAIL" placeholder="your@email.com" required autocomplete="email">
+    <input type="text" name="email_address_check" value="" style="display:none">
+    <input type="hidden" name="locale" value="en">
     <button type="submit">Join →</button>
   </form>
   <p class="email-note">No spam. Unsubscribe any time. We hate hangry people.</p>
