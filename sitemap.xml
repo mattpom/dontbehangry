@@ -4,7 +4,7 @@
   <url><loc>https://dontbehangry.com/about.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dontbehangry.com/ceviche-truth.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dontbehangry.com/dashi-built-a-cuisine.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://dontbehangry.com/index.html</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://dontbehangry.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
   <url><loc>https://dontbehangry.com/ingredients.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dontbehangry.com/jollof-wars.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dontbehangry.com/markets.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -24,4 +24,9 @@
   <url><loc>https://dontbehangry.com/submit.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dontbehangry.com/techniques.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dontbehangry.com/terms.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url>
+    <loc>https://dontbehangry.com/feed.xml</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
