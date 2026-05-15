@@ -2,11 +2,8 @@ name: Bi-Weekly Content Publisher
 
 on:
   schedule:
-    # Runs every other Thursday at 9am UTC (bi-weekly)
-    # First run: May 29, 2026
     - cron: '0 9 * * 4/14'
   workflow_dispatch:
-    # Allow manual trigger
 
 jobs:
   publish-draft:
@@ -18,117 +15,41 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check for draft articles
-        id: check-drafts
+      - name: Find and publish draft
         run: |
-          if [ -d "_drafts" ] && [ "$(ls -A _drafts/*.html 2>/dev/null)" ]; then
-            echo "has_drafts=true" >> $GITHUB_OUTPUT
-            # Get the first draft file alphabetically
-            DRAFT=$(ls _drafts/*.html | head -1)
-            echo "draft_file=$DRAFT" >> $GITHUB_OUTPUT
-            echo "draft_name=$(basename $DRAFT)" >> $GITHUB_OUTPUT
-          else
-            echo "has_drafts=false" >> $GITHUB_OUTPUT
-            echo "No draft articles found in _drafts/ folder. Skipping publish."
+          if ! ls _drafts/*.html > /dev/null 2>&1; then
+            echo "::warning::No drafts found in _drafts/ - add next article before scheduled run"
+            exit 0
           fi
 
-      - name: Publish draft article
-        if: steps.check-drafts.outputs.has_drafts == 'true'
-        run: |
-          DRAFT="${{ steps.check-drafts.outputs.draft_file }}"
-          DRAFT_NAME="${{ steps.check-drafts.outputs.draft_name }}"
+          DRAFT=$(ls _drafts/*.html | sort | head -1)
+          DRAFT_NAME=$(basename "$DRAFT")
 
-          echo "Publishing: $DRAFT_NAME"
-
-          # Move article from _drafts to root
+          # Move to root
           cp "$DRAFT" "$DRAFT_NAME"
-
-          # Extract title from HTML for archive entry
-          TITLE=$(grep -o '<title>[^<]*</title>' "$DRAFT_NAME" | sed 's/<[^>]*>//g' | sed 's/ — Don.*$//')
-          TODAY=$(date +"%B %d, %Y")
-          TODAY_ISO=$(date +"%Y-%m-%d")
-
-          echo "Title: $TITLE"
-          echo "Date: $TODAY"
-
-          # Update stories.html - add new article to top of article list
-          if [ -f "stories.html" ]; then
-            python3 - <<PYEOF
-import re
-
-with open('stories.html', 'r') as f:
-    content = f.read()
-
-draft_name = "$DRAFT_NAME"
-title = "$TITLE"
-today = "$TODAY"
-
-# Create new article row
-new_row = f"""              <a href="{draft_name}" class="article-row">
-                <span class="article-date">{today}</span>
-                <span class="article-title">{title}</span>
-                <span class="article-arrow">→</span>
-              </a>
-"""
-
-# Insert after opening of article-list div or after the first article-row
-content = re.sub(r'(class="article-list"[^>]*>s*)', r'\1' + new_row, content, count=1)
-
-with open('stories.html', 'w') as f:
-    f.write(content)
-
-print("stories.html updated")
-PYEOF
-          fi
-
-          # Update archive.html - add new article to top
-          if [ -f "archive.html" ]; then
-            python3 - <<PYEOF
-import re
-
-with open('archive.html', 'r') as f:
-    content = f.read()
-
-draft_name = "$DRAFT_NAME"
-title = "$TITLE"
-today = "$TODAY"
-today_iso = "$TODAY_ISO"
-
-# Create archive entry
-new_entry = f"""              <a href="{draft_name}" class="archive-item">
-                <time datetime="{today_iso}">{today}</time>
-                <span class="archive-title">{title}</span>
-                <span class="archive-arrow">→</span>
-              </a>
-"""
-
-# Insert after archive-list opening tag
-content = re.sub(r'(class="archive-list"[^>]*>s*)', r'\1' + new_entry, content, count=1)
-
-with open('archive.html', 'w') as f:
-    f.write(content)
-
-print("archive.html updated")
-PYEOF
-          fi
-
-          # Remove from drafts
           rm "$DRAFT"
 
-          echo "Done publishing $DRAFT_NAME"
+          # Extract title
+          TITLE=$(grep -oP '(?<=<title>)[^<]+' "$DRAFT_NAME" | sed "s/ — Don.*//")
+          TODAY=$(date +"%B %-d, %Y")
+          TODAY_ISO=$(date +"%Y-%m-%d")
 
-      - name: Commit and push changes
-        if: steps.check-drafts.outputs.has_drafts == 'true'
-        run: |
+          echo "Publishing: $DRAFT_NAME | $TITLE | $TODAY"
+
+          # Update stories.html - add new article row at top of article-list
+          if [ -f stories.html ]; then
+            NEW_ROW="              <a href=\"$DRAFT_NAME\" class=\"article-row\"><span class=\"article-date\">$TODAY<\/span><span class=\"article-title\">$TITLE<\/span><span class=\"article-arrow\">&rarr;<\/span><\/a>"
+            sed -i "s|class=\"article-list\"|class=\"article-list\">\n$NEW_ROW\n<!--ARTICLELIST|" stories.html
+          fi
+
+          # Update archive.html
+          if [ -f archive.html ]; then
+            ENTRY="              <a href=\"$DRAFT_NAME\" class=\"archive-item\"><time datetime=\"$TODAY_ISO\">$TODAY<\/time><span class=\"archive-title\">$TITLE<\/span><span class=\"archive-arrow\">&rarr;<\/span><\/a>"
+            sed -i "s|class=\"archive-list\"|class=\"archive-list\">\n$ENTRY\n<!--ARCHIVELIST|" archive.html
+          fi
+
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "Bi-weekly publish: ${{ steps.check-drafts.outputs.draft_name }} [$(date +'%Y-%m-%d')]"
+          git commit -m "Bi-weekly publish: $DRAFT_NAME [$TODAY_ISO]"
           git push
-
-      - name: No drafts notification
-        if: steps.check-drafts.outputs.has_drafts == 'false'
-        run: |
-          echo "::warning::No draft articles found in _drafts/ folder."
-          echo "::warning::Add your next article to the _drafts/ folder before the next scheduled run."
-          echo "::warning::Next scheduled run: $(date -d 'next Thursday + 14 days' '+%Y-%m-%d' 2>/dev/null || echo 'in 2 weeks')"
