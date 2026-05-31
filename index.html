@@ -137,6 +137,21 @@ footer a{color:var(--saffron);text-decoration:none}
   .email-section{padding:3rem 1.5rem}
   footer{padding:2rem 1.5rem;flex-direction:column;text-align:center}
 }
+
+/* SHOP SECTION */
+.shop-section{background:var(--black);border-top:1px solid var(--border);padding:4rem 2.5rem;text-align:center}
+.shop-section .tagline{font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--rust);margin-bottom:1.2rem}
+.shop-section h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;color:var(--warm);margin-bottom:0.6rem;line-height:1.1}
+.shop-section h2 em{font-style:italic;color:var(--saffron)}
+.shop-section .shop-sub{font-size:0.82rem;color:var(--stone);max-width:520px;margin:0 auto 2.5rem;line-height:1.75;font-weight:300}
+.shop-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem;max-width:960px;margin:0 auto 2.2rem}
+.shop-card{background:var(--dark);border:1px solid var(--border);padding:1.4rem;text-align:left;transition:border-color 0.2s,background 0.2s;text-decoration:none;display:block}
+.shop-card:hover{border-color:var(--saffron);background:var(--card)}
+.shop-card-tag{font-family:'DM Mono',monospace;font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--rust);margin-bottom:0.6rem;display:block}
+.shop-card-title{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:var(--warm);line-height:1.3;margin-bottom:0.5rem}
+.shop-card-price{font-family:'DM Mono',monospace;font-size:0.7rem;color:var(--saffron);letter-spacing:0.08em}
+.shop-cta{display:inline-block;background:transparent;border:1px solid var(--saffron);color:var(--saffron);padding:0.8rem 2rem;font-family:'DM Mono',monospace;font-size:0.72rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;transition:background 0.2s,color 0.2s}
+.shop-cta:hover{background:var(--saffron);color:var(--black)}
 </style>
 <!-- GA4 — swap G-921K5JGWGR with real Measurement ID once created in Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-921K5JGWGR"></script>
@@ -313,7 +328,46 @@ footer a{color:var(--saffron);text-decoration:none}
 
 <div class="cookie-banner" id="cookieBanner">
   <p>We use cookies for analytics. By continuing you accept our <a href="privacy.html">Privacy Policy</a>.</p>
-  <button class="cookie-accept" onclick="document.getElementById('cookieBanner').style.display='none';localStorage.setItem('dbhCookie','1')">Accept</button>
+  <button class="cookie-accept" onclick="document.getElementById('cookieBanner').style.display='none';localSt<section class="shop-section" id="shop">
+  <div class="tagline">The Hangry Shop</div>
+  <h2>Tools for the <em>disciplined</em> mind.</h2>
+  <p class="shop-sub">Printable planners, workbooks, and trackers built for people who take self-improvement as seriously as they take their food. No fluff. Instant download.</p>
+  <div class="shop-grid">
+    <a href="https://www.etsy.com/listing/4328469688/stoic-philosophy-journal-daily-virtue" class="shop-card" target="_blank" rel="noopener">
+      <span class="shop-card-tag">Stoicism · Mindset</span>
+      <div class="shop-card-title">Stoicism Planner — Marcus Aurelius Daily Discipline Workbook</div>
+      <div class="shop-card-price">$24.95</div>
+    </a>
+    <a href="https://www.etsy.com/listing/4366610820/personal-finance-mastery-budget-planner" class="shop-card" target="_blank" rel="noopener">
+      <span class="shop-card-tag">Finance · Budgeting</span>
+      <div class="shop-card-title">Personal Finance Planner — Budget Tracker &amp; Debt Payoff Workbook</div>
+      <div class="shop-card-price">$19.95</div>
+    </a>
+    <a href="https://www.etsy.com/listing/4502116527/30-day-money-reset-workbook-printable" class="shop-card" target="_blank" rel="noopener">
+      <span class="shop-card-tag">Finance · 30-Day Reset</span>
+      <div class="shop-card-title">30-Day Money Reset Workbook — Budget Planner &amp; Debt Tracker</div>
+      <div class="shop-card-price">$14.95</div>
+    </a>
+    <a href="https://www.etsy.com/listing/4420901574/one-day-at-a-time-30-day-personal" class="shop-card" target="_blank" rel="noopener">
+      <span class="shop-card-tag">Productivity · Habits</span>
+      <div class="shop-card-title">30-Day Productivity Planner — Daily Accountability &amp; Life Organization</div>
+      <div class="shop-card-price">$19.95</div>
+    </a>
+    <a href="https://www.etsy.com/listing/4423517275/benjamin-franklin-13-virtues-workbook" class="shop-card" target="_blank" rel="noopener">
+      <span class="shop-card-tag">Character · History</span>
+      <div class="shop-card-title">Benjamin Franklin 13 Virtues Workbook — Character Development Planner</div>
+      <div class="shop-card-price">$19.95</div>
+    </a>
+    <a href="https://www.etsy.com/listing/4418457952/2026-vision-board-goal-planner-printable" class="shop-card" target="_blank" rel="noopener">
+      <span class="shop-card-tag">Goals · Vision</span>
+      <div class="shop-card-title">Vision Board Planner — Interactive PDF Goal Workbook</div>
+      <div class="shop-card-price">$14.95</div>
+    </a>
+  </div>
+  <a href="https://brokehouseco.etsy.com" class="shop-cta" target="_blank" rel="noopener">Browse the full shop →</a>
+</section>
+
+orage.setItem('dbhCookie','1')">Accept</button>
 </div>
 
 <script>
