@@ -21,17 +21,17 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --black:#0a0806;--dark:#111009;--card:#161410;
-  --saffron:#e8a020;--rust:#c94a2a;--green:#2d5a27;
-  --warm:#f7f4ee;--muted:rgba(247,244,238,0.55);
-  --stone:rgba(247,244,238,0.38);--border:rgba(232,160,32,0.18)
+--black:#0a0806;--dark:#111009;--card:#161410;
+--saffron:#e8a020;--rust:#c94a2a;--green:#2d5a27;
+--warm:#f7f4ee;--muted:rgba(247,244,238,0.55);
+--stone:rgba(247,244,238,0.38);--border:rgba(232,160,32,0.18)
 }
 html{scroll-behavior:smooth}
 body{background:var(--black);color:var(--warm);font-family:'Barlow',sans-serif;overflow-x:hidden}
 body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.7}
 
 /* NAV */
-nav{position:sticky;top:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 2.5rem;background:rgba(10,8,6,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);gap:1rem}
+nav{position:relative;top:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 2.5rem;background:rgba(10,8,6,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);gap:1rem;position:sticky}
 .logo{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:900;color:var(--warm);text-decoration:none;letter-spacing:0.01em;white-space:nowrap}
 .logo em{font-style:italic;color:var(--saffron)}
 .nav-links{display:flex;gap:1.8rem;list-style:none;align-items:center}
@@ -40,7 +40,7 @@ nav{position:sticky;top:0;z-index:500;display:flex;align-items:center;justify-co
 .nav-submit{background:var(--rust)!important;color:var(--warm)!important;padding:0.45rem 1rem}
 .nav-submit:hover{background:var(--saffron)!important;color:var(--black)!important}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
-.hamburger span{display:block;width:22px;height:1px;background:var(--warm)}
+.hamburger span{display:block;width:22px;height:2px;background:var(--warm);border-radius:2px}
 
 /* HERO */
 .hero{display:grid;grid-template-columns:55% 45%;min-height:90vh;border-bottom:1px solid var(--border)}
@@ -128,18 +128,18 @@ footer p{font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;t
 footer a{color:var(--saffron);text-decoration:none}
 
 @media(max-width:900px){
-  .hero{grid-template-columns:1fr;min-height:auto}
-  .hero-right{display:none}
-  .regions-grid{grid-template-columns:1fr 1fr}
-  .stories{grid-template-columns:1fr}
-  .story-side{border-right:none;border-top:1px solid var(--border)}
-  nav{padding:1rem 1.5rem}
-  .nav-links{display:none}
-  .nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#0a0806;border-bottom:1px solid var(--border);padding:1.5rem;gap:1rem;z-index:200}
-  .hamburger{display:flex}
-  .section{padding:3rem 1.5rem}
-  .email-section{padding:3rem 1.5rem}
-  footer{padding:2rem 1.5rem;flex-direction:column;text-align:center}
+.hero{grid-template-columns:1fr;min-height:auto}
+.hero-right{display:none}
+.regions-grid{grid-template-columns:1fr 1fr}
+.stories{grid-template-columns:1fr}
+.story-side{border-right:none;border-top:1px solid var(--border)}
+nav{padding:1rem 1.5rem;position:relative}
+.nav-links{display:none}
+.nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#0a0806;border-bottom:1px solid var(--border);padding:1.5rem;gap:1rem;z-index:200}
+.hamburger{display:flex}
+.section{padding:3rem 1.5rem}
+.email-section{padding:3rem 1.5rem}
+footer{padding:2rem 1.5rem;flex-direction:column;text-align:center}
 }
 
 /* SHOP SECTION */
@@ -157,190 +157,191 @@ footer a{color:var(--saffron);text-decoration:none}
 .shop-cta{display:inline-block;background:transparent;border:1px solid var(--saffron);color:var(--saffron);padding:0.8rem 2rem;font-family:'DM Mono',monospace;font-size:0.72rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;transition:background 0.2s,color 0.2s}
 .shop-cta:hover{background:var(--saffron);color:var(--black)}
 </style>
-<!-- GA4 — swap G-921K5JGWGR with real Measurement ID once created in Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-921K5JGWGR"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-921K5JGWGR');
-  </script>
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-921K5JGWGR"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-921K5JGWGR');
+</script>
 </head>
 <body>
 
-<nav>
-  <a href="index.html" class="logo">Don't Be <em>Hangry</em></a>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="regions.html">Regions</a></li>
-    <li><a href="ingredients.html">Ingredients</a></li>
-    <li><a href="techniques.html">Techniques</a></li>
-    <li><a href="markets.html">Markets</a></li>
-    <li><a href="stories.html">Stories</a></li>
-    <li><a href="shop.html">Shop</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="submit.html" class="nav-submit">Submit a Dish</a></li>
-  </ul>
-  <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
-    <span></span><span></span><span></span>
-  </button>
+<nav id="mainNav">
+<a href="index.html" class="logo">Don't Be <em>Hangry</em></a>
+<ul class="nav-links" id="navLinks">
+<li><a href="regions.html">Regions</a></li>
+<li><a href="ingredients.html">Ingredients</a></li>
+<li><a href="techniques.html">Techniques</a></li>
+<li><a href="markets.html">Markets</a></li>
+<li><a href="stories.html">Stories</a></li>
+<li><a href="shop.html">Shop</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="submit.html" class="nav-submit">Submit a Dish</a></li>
+</ul>
+<button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+<span></span><span></span><span></span>
+</button>
 </nav>
 
 <div class="hero">
-  <div class="hero-left">
-    <div class="eyebrow">Food Journalism Without the Pretension</div>
-    <h1 class="hero-title">Your dinner<br>has a <em>history.</em><br>We found it.</h1>
-    <p class="hero-sub">Every dish is a document. Every market is an archive. Every ingredient has a story that predates any cookbook. We read them so you don't have to eat in the dark.</p>
-    <a href="stories.html" class="hero-cta">Read the Stories →</a>
-  </div>
-  <div class="hero-right">
-    <a href="dashi-built-a-cuisine.html" class="hero-feature">
-      <span class="feat-num">01 / Featured</span>
-      <span class="feat-flag">JP</span>
-      <div class="feat-region">Japan · Umami · Technique</div>
-      <div class="feat-title">The Dashi That Built a Cuisine</div>
-      <div class="feat-desc">The broth nobody sees, doing the work every other ingredient gets credit for. The invisible architecture of Japanese cuisine, explained.</div>
-      <div class="feat-arrow">Read →</div>
-    </a>
-    <a href="jollof-wars.html" class="hero-feature">
-      <span class="feat-num">02 / Feature</span>
-      <span class="feat-flag">WA</span>
-      <div class="feat-region">West Africa · Rice · Identity</div>
-      <div class="feat-title">The Jollof Wars</div>
-      <div class="feat-desc">The most entertaining food argument on Earth is not actually about food. It's about identity, credit, and who gets to be seen.</div>
-      <div class="feat-arrow">Read →</div>
-    </a>
-    <a href="basque-pintxos.html" class="hero-feature">
-      <span class="feat-num">03 / Feature</span>
-      <span class="feat-flag">ES</span>
-      <div class="feat-region">Basque · Culture · Identity</div>
-      <div class="feat-title">The Basque Table: Pintxos, Txoko, and a Food Culture Unlike Any Other</div>
-      <div class="feat-desc">More Michelin stars per capita than anywhere on earth. Here is why — and the secret cooking clubs behind it.</div>
-      <div class="feat-arrow">Read →</div>
-    </a>
-  </div>
+<div class="hero-left">
+<div class="eyebrow">Food Journalism Without the Pretension</div>
+<h1 class="hero-title">Your dinner<br>has a <em>history.</em><br>We found it.</h1>
+<p class="hero-sub">Every dish is a document. Every market is an archive. Every ingredient has a story that predates any cookbook. We read them so you don't have to eat in the dark.</p>
+<a href="stories.html" class="hero-cta">Read the Stories →</a>
+</div>
+<div class="hero-right">
+<a href="dashi-built-a-cuisine.html" class="hero-feature">
+<span class="feat-num">01 / Featured</span>
+<span class="feat-flag">JP</span>
+<div class="feat-region">Japan · Umami · Technique</div>
+<div class="feat-title">The Dashi That Built a Cuisine</div>
+<div class="feat-desc">The broth nobody sees, doing the work every other ingredient gets credit for. The invisible architecture of Japanese cuisine, explained.</div>
+<div class="feat-arrow">Read →</div>
+</a>
+<a href="jollof-wars.html" class="hero-feature">
+<span class="feat-num">02 / Feature</span>
+<span class="feat-flag">WA</span>
+<div class="feat-region">West Africa · Rice · Identity</div>
+<div class="feat-title">The Jollof Wars</div>
+<div class="feat-desc">The most entertaining food argument on Earth is not actually about food. It's about identity, credit, and who gets to be seen.</div>
+<div class="feat-arrow">Read →</div>
+</a>
+<a href="basque-pintxos.html" class="hero-feature">
+<span class="feat-num">03 / Feature</span>
+<span class="feat-flag">ES</span>
+<div class="feat-region">Basque · Culture · Identity</div>
+<div class="feat-title">The Basque Table: Pintxos, Txoko, and a Food Culture Unlike Any Other</div>
+<div class="feat-desc">More Michelin stars per capita than anywhere on earth. Here is why — and the secret cooking clubs behind it.</div>
+<div class="feat-arrow">Read →</div>
+</a>
+</div>
 </div>
 
 <div class="marquee">
-  <div class="marquee-inner">
-    <span>Pintxos</span><span>&middot;</span><span>True Lox</span><span>&middot;</span><span>Mole Negro</span><span>&middot;</span><span>Dashi</span><span>&middot;</span><span>Injera</span><span>&middot;</span><span>Biryani</span><span>&middot;</span><span>Ramen</span><span>&middot;</span><span>Tagine</span><span>&middot;</span><span>Pho</span><span>&middot;</span><span>Pierogi</span><span>&middot;</span><span>Bibimbap</span><span>&middot;</span><span>Ceviche</span><span>&middot;</span><span>Baklava</span><span>&middot;</span><span>Jollof Rice</span><span>&middot;</span><span>Dim Sum</span><span>&middot;</span><span>Paella</span><span>&middot;</span><span>Rendang</span><span>&middot;</span><span>Khachapuri</span><span>&middot;</span><span>Nixtamal</span><span>&middot;</span><span>Miso</span><span>&middot;</span><span>Injera</span><span>&middot;</span>
-    <span>Mole Negro</span><span>·</span><span>Dashi</span><span>·</span><span>Injera</span><span>·</span><span>Biryani</span><span>·</span><span>Ramen</span><span>·</span><span>Tagine</span><span>·</span><span>Pho</span><span>·</span><span>Pierogi</span><span>·</span><span>Bibimbap</span><span>·</span><span>Ceviche</span><span>·</span><span>Baklava</span><span>·</span><span>Jollof Rice</span><span>·</span><span>Dim Sum</span><span>·</span><span>Paella</span><span>·</span><span>Rendang</span><span>·</span><span>Khachapuri</span><span>·</span><span>Nixtamal</span><span>·</span><span>Miso</span><span>·</span><span>Injera</span><span>·</span>
-  </div>
+<div class="marquee-inner">
+<span>Pintxos</span><span>&middot;</span><span>True Lox</span><span>&middot;</span><span>Mole Negro</span><span>&middot;</span><span>Dashi</span><span>&middot;</span><span>Injera</span><span>&middot;</span><span>Biryani</span><span>&middot;</span><span>Ramen</span><span>&middot;</span><span>Tagine</span><span>&middot;</span><span>Pho</span><span>&middot;</span><span>Pierogi</span><span>&middot;</span><span>Bibimbap</span><span>&middot;</span><span>Ceviche</span><span>&middot;</span><span>Baklava</span><span>&middot;</span><span>Jollof Rice</span><span>&middot;</span><span>Dim Sum</span><span>&middot;</span><span>Paella</span><span>&middot;</span><span>Rendang</span><span>&middot;</span><span>Khachapuri</span><span>&middot;</span><span>Nixtamal</span><span>&middot;</span><span>Miso</span><span>&middot;</span><span>Injera</span><span>&middot;</span>
+<span>Mole Negro</span><span>&middot;</span><span>Dashi</span><span>&middot;</span><span>Injera</span><span>&middot;</span><span>Biryani</span><span>&middot;</span><span>Ramen</span><span>&middot;</span><span>Tagine</span><span>&middot;</span><span>Pho</span><span>&middot;</span><span>Pierogi</span><span>&middot;</span><span>Bibimbap</span><span>&middot;</span><span>Ceviche</span><span>&middot;</span><span>Baklava</span><span>&middot;</span><span>Jollof Rice</span><span>&middot;</span><span>Dim Sum</span><span>&middot;</span><span>Paella</span><span>&middot;</span><span>Rendang</span><span>&middot;</span><span>Khachapuri</span><span>&middot;</span><span>Nixtamal</span><span>&middot;</span><span>Miso</span><span>&middot;</span><span>Injera</span><span>&middot;</span>
+</div>
 </div>
 
 <div style="background:var(--black);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:2.5rem 2.5rem;overflow:hidden">
-  <div style="display:flex;align-items:center;gap:0;white-space:nowrap;overflow:hidden">
-    <div style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--rust);margin-right:2rem;flex-shrink:0">We are not:</div>
-    <div style="display:flex;gap:2.5rem;flex-wrap:wrap">
-      <span style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,244,238,0.25);text-decoration:line-through">A recipe site</span>
-      <span style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,244,238,0.25);text-decoration:line-through">A restaurant guide</span>
-      <span style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,244,238,0.25);text-decoration:line-through">A travel blog</span>
-      <span style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,244,238,0.25);text-decoration:line-through">A ranking list</span>
-      <span style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,244,238,0.25);text-decoration:line-through">Influencer-driven</span>
-      <span style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,244,238,0.25);text-decoration:line-through">Sponsored content</span>
-      <span style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--saffron)">We are: Stories. ✦</span>
-    </div>
-  </div>
+<div style="display:flex;align-items:center;gap:0;white-space:nowrap;overflow:hidden">
+<div style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--rust);margin-right:2rem;flex-shrink:0">We are not:</div>
+<div style="display:flex;gap:2.5rem;flex-wrap:wrap">
+<span style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,244,238,0.25);text-decoration:line-through">A recipe site</span>
+<span style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,244,238,0.25);text-decoration:line-through">A restaurant guide</span>
+<span style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,244,238,0.25);text-decoration:line-through">A travel blog</span>
+<span style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,244,238,0.25);text-decoration:line-through">A ranking list</span>
+<span style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,244,238,0.25);text-decoration:line-through">Influencer-driven</span>
+<span style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,244,238,0.25);text-decoration:line-through">Sponsored content</span>
+<span style="font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--saffron)">We are: Stories. ✦</span>
+</div>
+</div>
 </div>
 <div class="mission">
-  <p>No recipes. No rankings. No "Top 10 Foods of [Country]." Just the stories behind what people eat — why it exists, what it survived, and what it says about the people who made it. Food journalism that treats food like it actually matters. Because it <em>does.</em></p>
+<p>No recipes. No rankings. No "Top 10 Foods of [Country]." Just the stories behind what people eat — why it exists, what it survived, and what it says about the people who made it. Food journalism that treats food like it actually matters. Because it <em>does.</em></p>
 </div>
 
 <div class="section">
-  <div class="sec-head">
-    <span class="sec-label">Explore by Region</span>
-    <h2 class="sec-title">The <em>World</em></h2>
-  </div>
-  <div class="regions-grid">
-    <a href="region-east-asia.html" class="region-card">
-      <span class="r-emoji">🌏</span>
-      <div class="r-name">East Asia</div>
-      <div class="r-desc">Japan · China · Korea · Taiwan</div>
-    </a>
-    <a href="region-south-asia.html" class="region-card">
-      <span class="r-emoji">🌶️</span>
-      <div class="r-name">South Asia</div>
-      <div class="r-desc">India · Sri Lanka · Nepal</div>
-    </a>
-    <a href="region-southeast-asia.html" class="region-card">
-      <span class="r-emoji">🍜</span>
-      <div class="r-name">Southeast Asia</div>
-      <div class="r-desc">Thailand · Vietnam · Malaysia</div>
-    </a>
-    <a href="region-mediterranean.html" class="region-card">
-      <span class="r-emoji">🫒</span>
-      <div class="r-name">Mediterranean</div>
-      <div class="r-desc">Italy · Greece · Spain · Turkey</div>
-    </a>
-    <a href="region-africa.html" class="region-card">
-      <span class="r-emoji">🌍</span>
-      <div class="r-name">Africa</div>
-      <div class="r-desc">Ethiopia · Nigeria · Morocco</div>
-    </a>
-    <a href="region-latin-america.html" class="region-card">
-      <span class="r-emoji">🌮</span>
-      <div class="r-name">Latin America</div>
-      <div class="r-desc">Mexico · Peru · Colombia</div>
-    </a>
-    <a href="region-middle-east.html" class="region-card">
-      <span class="r-emoji">🫙</span>
-      <div class="r-name">Middle East</div>
-      <div class="r-desc">Lebanon · Iran · Georgia</div>
-    </a>
-    <a href="region-europe.html" class="region-card">
-      <span class="r-emoji">🥐</span>
-      <div class="r-name">Europe</div>
-      <div class="r-desc">France · Basque · Scandinavia</div>
-    </a>
-  </div>
+<div class="sec-head">
+<span class="sec-label">Explore by Region</span>
+<h2 class="sec-title">The <em>World</em></h2>
+</div>
+<div class="regions-grid">
+<a href="region-east-asia.html" class="region-card">
+<span class="r-emoji">🌏</span>
+<div class="r-name">East Asia</div>
+<div class="r-desc">Japan · China · Korea · Taiwan</div>
+</a>
+<a href="region-south-asia.html" class="region-card">
+<span class="r-emoji">🌶️</span>
+<div class="r-name">South Asia</div>
+<div class="r-desc">India · Sri Lanka · Nepal</div>
+</a>
+<a href="region-southeast-asia.html" class="region-card">
+<span class="r-emoji">🍜</span>
+<div class="r-name">Southeast Asia</div>
+<div class="r-desc">Thailand · Vietnam · Malaysia</div>
+</a>
+<a href="region-mediterranean.html" class="region-card">
+<span class="r-emoji">🫒</span>
+<div class="r-name">Mediterranean</div>
+<div class="r-desc">Italy · Greece · Spain · Turkey</div>
+</a>
+<a href="region-africa.html" class="region-card">
+<span class="r-emoji">🌍</span>
+<div class="r-name">Africa</div>
+<div class="r-desc">Ethiopia · Nigeria · Morocco</div>
+</a>
+<a href="region-latin-america.html" class="region-card">
+<span class="r-emoji">🌮</span>
+<div class="r-name">Latin America</div>
+<div class="r-desc">Mexico · Peru · Colombia</div>
+</a>
+<a href="region-middle-east.html" class="region-card">
+<span class="r-emoji">🫙</span>
+<div class="r-name">Middle East</div>
+<div class="r-desc">Lebanon · Iran · Georgia</div>
+</a>
+<a href="region-europe.html" class="region-card">
+<span class="r-emoji">🥐</span>
+<div class="r-name">Europe</div>
+<div class="r-desc">France · Basque · Scandinavia</div>
+</a>
+</div>
 </div>
 
 <div class="stories">
-  <a href="jollof-wars.html" class="story-main">
-    <span class="s-cat">West Africa · Rice · Culture</span>
-    <div class="s-title">The Jollof Wars: The Rice Dish That Nigeria, Ghana, and Senegal Are Still Arguing About — and Why They Should Never Stop</div>
-    <p class="s-body">This is not really about rice. It's about who gets credit, who gets seen, and what it means for a food culture to be taken seriously on its own terms. The argument is the point.</p>
-  </a>
-  <a href="basque-pintxos.html" class="story-side">
-    <span class="s-cat">Basque · Culture · Identity</span>
-    <div class="s-title">The Basque Table: Pintxos, Txoko, and a Food Culture Unlike Any Other</div>
-    <p class="s-body">The Basque Country has more Michelin stars per capita than anywhere on earth — and it starts with private cooking clubs and bar counters covered in masterpiece bites.</p>
-  </a>
-  <a href="true-lox.html" class="story-side">
-    <span class="s-cat">Jewish-American · Ingredients · History</span>
-    <div class="s-title">What You're Eating Is Probably Not Lox</div>
-    <p class="s-body">Real lox is salt-cured, unsmoked belly salmon. What most people eat — and call lox — is smoked salmon. The switch happened gradually, and almost nobody noticed.</p>
-  </a>
+<a href="jollof-wars.html" class="story-main">
+<span class="s-cat">West Africa · Rice · Culture</span>
+<div class="s-title">The Jollof Wars: The Rice Dish That Nigeria, Ghana, and Senegal Are Still Arguing About — and Why They Should Never Stop</div>
+<p class="s-body">This is not really about rice. It's about who gets credit, who gets seen, and what it means for a food culture to be taken seriously on its own terms. The argument is the point.</p>
+</a>
+<a href="basque-pintxos.html" class="story-side">
+<span class="s-cat">Basque · Culture · Identity</span>
+<div class="s-title">The Basque Table: Pintxos, Txoko, and a Food Culture Unlike Any Other</div>
+<p class="s-body">The Basque Country has more Michelin stars per capita than anywhere on earth — and it starts with private cooking clubs and bar counters covered in masterpiece bites.</p>
+</a>
+<a href="true-lox.html" class="story-side">
+<span class="s-cat">Jewish-American · Ingredients · History</span>
+<div class="s-title">What You're Eating Is Probably Not Lox</div>
+<p class="s-body">Real lox is salt-cured, unsmoked belly salmon. What most people eat — and call lox — is smoked salmon. The switch happened gradually, and almost nobody noticed.</p>
+</a>
 </div>
 
 <div class="section" id="shop"><p class="section-label">Shop</p><h2 class="section-title">The <em>Hangry</em> Shop</h2><p style="color:rgba(247,244,238,0.6);max-width:560px;margin:0 auto 2rem;text-align:center;">Ingredients, tools, and books we actually use and recommend.</p><div style="text-align:center;padding:2rem;color:rgba(247,244,238,0.4);font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.15em;">COMING SOON</div></div>
 <section class="email-section" id="newsletter">
-  <div class="tagline">The Hangry Dispatch</div>
-  <h2>The Hangry <em>Dispatch.</em></h2>
-  <p>A newsletter about the world's food cultures — delivered when there's something worth saying. No filler. No recipes. No "5 Foods You Must Try Before You Die." Just stories. Free forever.</p>
-  <form class="email-form" action="https://179420ee.sibforms.com/serve/MUIFAJTIiPSQGOqXdaPQNQMqDuMIKnnvhsS8x_-aD4JMkftCOx8hqGGk7mQJZlBobLmwjvRG312EVIaqaojHA66NRwzWPxvzLYAadzflbD6sB00fL4tldZD6l06OGh1Ppg4w6EbETou8seJGgt4Ikj0JtTwVujtk6zBcLSonNJ1sjsUuEPiZojsA4oxoMbqrrUzW5k-smIG5flCmtg==" method="POST" target="_blank">
-    <input type="email" name="EMAIL" placeholder="your@email.com" required autocomplete="email">
-    <input type="text" name="email_address_check" value="" style="display:none">
-    <input type="hidden" name="locale" value="en">
-    <button type="submit">Join →</button>
-  </form>
-  <p class="email-note">No spam. Unsubscribe any time. We hate hangry people.</p>
+<div class="tagline">The Hangry Dispatch</div>
+<h2>The Hangry <em>Dispatch.</em></h2>
+<p>A newsletter about the world's food cultures — delivered when there's something worth saying. No filler. No recipes. No "5 Foods You Must Try Before You Die." Just stories. Free forever.</p>
+<form class="email-form" action="https://179420ee.sibforms.com/serve/MUIFAJTIiPSQGOqXdaPQNQMqDuMIKnnvhsS8x_-aD4JMkftCOx8hqGGk7mQJZlBobLmwjvRG312EVIaqaojHA66NRwzWPxvzLYAadzflbD6sB00fL4tldZD6l06OGh1Ppg4w6EbETou8seJGgt4Ikj0JtTwVujtk6zBcLSonNJ1sjsUuEPiZojsA4oxoMbqrrUzW5k-smIG5flCmtg==" method="POST" target="_blank">
+<input type="email" name="EMAIL" placeholder="your@email.com" required autocomplete="email">
+<input type="text" name="email_address_check" value="" style="display:none">
+<input type="hidden" name="locale" value="en">
+<button type="submit">Join →</button>
+</form>
+<p class="email-note">No spam. Unsubscribe any time. We hate hangry people.</p>
 </section>
 
 <footer>
-  <div class="footer-logo">Don't Be <em>Hangry</em></div>
-  <p>© 2026 <a href="index.html">DontBeHangry.com</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="affiliate.html">Affiliate</a> · <a href="disclaimer.html">Disclaimer</a> · <a href="cookie.html">Cookie</a> · <a href="about.html">About</a> · <a href="https://x.com/dontbehangry" target="_blank" rel="noopener">𝕏 Follow</a></p>
-  <p>A <a href="#" rel="noopener">Mattpom Digital Ventures</a> site</p>
+<div class="footer-logo">Don't Be <em>Hangry</em></div>
+<p>© 2026 <a href="index.html">DontBeHangry.com</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="affiliate.html">Affiliate</a> · <a href="disclaimer.html">Disclaimer</a> · <a href="cookie.html">Cookie</a> · <a href="about.html">About</a> · <a href="https://x.com/dontbehangry" target="_blank" rel="noopener">𝕏 Follow</a></p>
+<p>A <a href="#" rel="noopener">Mattpom Digital Ventures</a> site</p>
 </footer>
 
 <div class="cookie-banner" id="cookieBanner">
-  <p>We use cookies for analytics. By continuing you accept our <a href="privacy.html">Privacy Policy</a>.</p>
-  <button class="cookie-accept" onclick="document.getElementById('cookieBanner').style.display='none';localSt
-localStorage.setItem('dbhCookie','1')">Accept</button>
+<p>We use cookies for analytics. By continuing you accept our <a href="privacy.html">Privacy Policy</a>.</p>
+<button class="cookie-accept" onclick="document.getElementById('cookieBanner').style.display='none';localStorage.setItem('dbhCookie','1')">Accept</button>
 </div>
 
 <script>
 if(localStorage.getItem('dbhCookie')) document.getElementById('cookieBanner').style.display='none';
-document.querySelector('.hamburger').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
+document.getElementById('hamburgerBtn').addEventListener('click', function() {
+  document.getElementById('navLinks').classList.toggle('open');
+});
 </script>
 </body>
 </html>
