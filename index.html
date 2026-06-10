@@ -31,7 +31,7 @@ body{background:var(--black);color:var(--warm);font-family:'Barlow',sans-serif;o
 body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.7}
 
 /* NAV */
-nav{position:relative;top:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 2.5rem;background:rgba(10,8,6,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);gap:1rem;position:sticky}
+nav{position:sticky;top:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 2.5rem;background:rgba(10,8,6,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);gap:1rem}
 .logo{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:900;color:var(--warm);text-decoration:none;letter-spacing:0.01em;white-space:nowrap}
 .logo em{font-style:italic;color:var(--saffron)}
 .nav-links{display:flex;gap:1.8rem;list-style:none;align-items:center}
@@ -133,9 +133,9 @@ footer a{color:var(--saffron);text-decoration:none}
 .regions-grid{grid-template-columns:1fr 1fr}
 .stories{grid-template-columns:1fr}
 .story-side{border-right:none;border-top:1px solid var(--border)}
-nav{padding:1rem 1.5rem;position:relative}
+nav{padding:1rem 1.5rem}
 .nav-links{display:none}
-.nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#0a0806;border-bottom:1px solid var(--border);padding:1.5rem;gap:1rem;z-index:200}
+.nav-links.open{display:flex;flex-direction:column;position:fixed;top:60px;left:0;right:0;background:#0a0806;border-bottom:1px solid var(--border);padding:1.5rem;gap:1rem;z-index:9000}
 .hamburger{display:flex}
 .section{padding:3rem 1.5rem}
 .email-section{padding:3rem 1.5rem}
