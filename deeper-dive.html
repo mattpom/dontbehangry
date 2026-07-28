@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deeper Dive -- Don't Be Hangry</title>
+<link rel="canonical" href="https://dontbehangry.com/deeper-dive.html">
+<meta name="description" content="More finds, more visual inspiration -- the deeper dive behind Don't Be Hangry.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Mono:wght@300;400;500&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--black:#0a0806;--dark:#111009;--card:#161410;
+--saffron:#e8a020;--rust:#c94a2a;--green:#2d5a27;
+--warm:#f7f4ee;--muted:rgba(247,244,238,0.55);
+--stone:rgba(247,244,238,0.38);--border:rgba(232,160,32,0.18)
+}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--warm);font-family:'Barlow',sans-serif;overflow-x:hidden}
+nav{position:sticky;top:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 2.5rem;background:rgba(10,8,6,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);gap:1rem}
+.logo{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:900;color:var(--warm);text-decoration:none;letter-spacing:0.01em;white-space:nowrap}
+.logo em{font-style:italic;color:var(--saffron)}
+.nav-links{display:flex;gap:1.8rem;list-style:none;align-items:center}
+.nav-links a{font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--stone);text-decoration:none;transition:color 0.2s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:var(--saffron)}
+.nav-submit{background:var(--rust)!important;color:var(--warm)!important;padding:0.45rem 1rem}
+.nav-submit:hover{background:var(--saffron)!important;color:var(--black)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--warm);border-radius:2px}
+.page-hero{padding:5rem 2.5rem 3rem;border-bottom:1px solid var(--border)}
+.eyebrow{font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--saffron);margin-bottom:1.4rem;display:flex;align-items:center;gap:1rem}
+.eyebrow::before{content:'';display:inline-block;width:28px;height:1px;background:var(--saffron)}
+.page-title{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5.5vw,4.5rem);font-weight:900;line-height:0.98;color:var(--warm);margin-bottom:1.2rem}
+.page-title em{font-style:italic;color:var(--saffron)}
+.page-sub{font-size:1rem;font-weight:300;color:var(--muted);line-height:1.8;max-width:600px}
+.main-wrap{max-width:900px;margin:0 auto;padding:3rem 2.5rem 5rem}
+.section{margin-bottom:2.5rem}
+.section h2{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--warm);margin-bottom:0.8rem}
+.section p{font-size:0.95rem;font-weight:300;color:var(--muted);line-height:1.8;margin-bottom:1rem}
+.pin-embed-wrap{background:var(--card);border:1px solid var(--border);padding:2rem;margin-top:1.5rem;min-height:200px}
+footer{background:var(--dark);border-top:1px solid var(--border);padding:2.5rem 2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-logo{font-family:'Playfair Display',serif;font-size:1rem;font-weight:900;color:var(--warm)}
+.footer-logo em{font-style:italic;color:var(--saffron)}
+footer p{font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--stone)}
+footer a{color:var(--saffron);text-decoration:none}
+@media(max-width:900px){.nav-links{display:none}.hamburger{display:flex}}
+</style>
+</head>
+<body>
+<nav>
+<a href="index.html" class="logo">Don't Be <em>Hangry</em></a>
+<ul class="nav-links" id="navLinks">
+<li><a href="regions.html">Regions</a></li>
+<li><a href="ingredients.html">Ingredients</a></li>
+<li><a href="techniques.html">Techniques</a></li>
+<li><a href="markets.html">Markets</a></li>
+<li><a href="stories.html">Stories</a></li>
+<li><a href="shop.html">Shop</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="deeper-dive.html" class="active">Deeper Dive</a></li><li><a href="submit.html" class="nav-submit">Submit a Dish</a></li>
+</ul>
+<button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+<span></span><span></span><span></span>
+</button>
+</nav>
+<div class="page-hero">
+<div class="eyebrow">More To See</div>
+<h1 class="page-title">Deeper <em>Dive</em></h1>
+<p class="page-sub">The visual side of Don't Be Hangry -- finds, inspiration, and extras pulled straight from a living Pinterest board.</p>
+</div>
+<div class="main-wrap">
+<div class="section">
+<h2>What This Is</h2>
+<p>Not every dish fits into a story. This page is where the extra finds live -- the images and references that inform the stories published elsewhere on this site.</p>
+<p>It updates as new pins get added, so check back for more.</p>
+</div>
+<div class="section">
+<h2>The Board</h2>
+<div class="pin-embed-wrap">
+<a data-pin-do="embedUser" href="https://www.pinterest.com/luxmodestudio/" data-pin-board-width="900" data-pin-scale-height="240" data-pin-scale-width="80"></a>
+</div>
+</div>
+</div>
+<footer>
+<div class="footer-logo">Don't Be <em>Hangry</em></div>
+<p>&copy; 2026 <a href="index.html">DontBeHangry.com</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="affiliate.html">Affiliate</a> &middot; <a href="disclaimer.html">Disclaimer</a> &middot; <a href="cookie.html">Cookie</a> &middot; <a href="about.html">About</a></p>
+</footer>
+<script async defer src="https://assets.pinterest.com/js/pinit.js"></script>
+</body>
+</html>
