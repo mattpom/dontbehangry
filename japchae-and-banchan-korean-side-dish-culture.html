@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Japchae and Banchan: Korea's Everyday Feast — Don't Be Hangry</title>
+<meta name="description" content="Why the Korean table is built around banchan, not a single hero dish -- and where japchae's sweet-savory glass noodles fit into that tradition." />
+<link rel="icon" href="/favicon.ico" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--black:#0a0806;--dark:#111009;--card:#161410;--saffron:#e8a020;--rust:#c94a2a;--warm:#f7f4ee;--muted:rgba(247,244,238,0.55);--stone:rgba(247,244,238,0.38);--border:rgba(232,160,32,0.18)}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--warm);font-family:'Barlow',sans-serif;overflow-x:hidden;line-height:1.7}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.7}
+nav{position:sticky;top:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 2.5rem;background:rgba(10,8,6,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);gap:1rem}
+.logo{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:900;color:var(--warm);text-decoration:none}
+.logo em{font-style:italic;color:var(--saffron)}
+.nav-links{display:flex;gap:1.8rem;list-style:none;align-items:center}
+.nav-links a{font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--stone);text-decoration:none;transition:color 0.2s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:var(--saffron)}
+.nav-submit{background:var(--rust)!important;color:var(--warm)!important;padding:0.45rem 1rem}
+.nav-submit:hover{background:var(--saffron)!important;color:var(--black)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{display:block;width:22px;height:1px;background:var(--warm)}
+.page-hero{padding:6rem 2.5rem 4rem;border-bottom:1px solid var(--border);background:linear-gradient(160deg,#0f0c08 0%,#0a0806 100%);position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;top:0;right:0;width:40%;height:100%;background:radial-gradient(ellipse at right,rgba(232,160,32,0.06) 0%,transparent 70%);pointer-events:none}
+.eyebrow{font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--saffron);margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem}
+.eyebrow::before{content:'';display:inline-block;width:28px;height:1px;background:var(--saffron)}
+.page-title{font-family:'Playfair Display',serif;font-size:clamp(3rem,6vw,6rem);font-weight:900;line-height:0.95;color:var(--warm);margin-bottom:1.2rem}
+.page-title em{font-style:italic;color:var(--saffron)}
+.page-sub{font-size:1rem;font-weight:300;color:var(--muted);max-width:540px;line-height:1.8}
+.main{max-width:1100px;margin:0 auto;padding:4rem 2.5rem 6rem}
+footer{background:var(--dark);border-top:1px solid var(--border);padding:2.5rem 2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-logo{font-family:'Playfair Display',serif;font-size:1rem;font-weight:900;color:var(--warm)}
+.footer-logo em{font-style:italic;color:var(--saffron)}
+footer p{font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--stone)}
+footer a{color:var(--saffron);text-decoration:none}
+@media(max-width:900px){nav{padding:1rem 1.5rem}.nav-links{display:none}.nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#0a0806;border-bottom:1px solid var(--border);padding:1.5rem;gap:1rem;z-index:200}.hamburger{display:flex}.page-hero{padding:5rem 1.5rem 3rem}.main{padding:2.5rem 1.5rem}footer{flex-direction:column;text-align:center;padding:2rem 1.5rem}}
+.article-body{max-width:720px;margin:0 auto;padding:4rem 2.5rem 6rem}
+.article-meta{font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--stone);margin-bottom:0.8rem}
+.article-tag{display:inline-block;font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--saffron);border:1px solid var(--border);padding:0.3rem 0.7rem;margin-bottom:1.5rem}
+.article-body h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4.5vw,3.2rem);font-weight:900;line-height:1.1;color:var(--warm);margin-bottom:1.5rem}
+.article-body h2{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--warm);margin:2.5rem 0 1rem}
+.article-body p{font-size:0.98rem;font-weight:300;color:rgba(247,244,238,0.75);margin-bottom:1.2rem}
+.article-body p.lead{font-size:1.15rem;font-weight:300;color:var(--muted);margin-bottom:2rem;line-height:1.8}
+.back-link{display:inline-block;margin-top:2.2rem;font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--saffron);text-decoration:none;transition:color 0.2s}
+.back-link:hover{color:var(--warm)}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+<a href="index.html" class="logo">Don't Be <em>Hangry</em></a>
+<ul class="nav-links" id="navLinks">
+<li><a href="regions.html">Regions</a></li>
+<li><a href="ingredients.html">Ingredients</a></li>
+<li><a href="techniques.html">Techniques</a></li>
+<li><a href="markets.html">Markets</a></li>
+<li><a href="stories.html">Stories</a></li>
+<li><a href="shop.html">Shop</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="deeper-dive.html">Deeper Dive</a></li><li><a href="submit.html" class="nav-submit">Submit a Dish</a></li>
+</ul>
+<button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+<span></span><span></span><span></span>
+</button>
+</nav>
+
+<article class="article-body">
+
+<p class="article-meta">Korea &nbsp;&middot;&nbsp; Banchan &nbsp;&middot;&nbsp; Culture &nbsp;&middot;&nbsp; August 13, 2026</p>
+<span class="article-tag">Deeper Dive</span>
+
+<h1>Japchae and Banchan: Korea's Everyday Feast</h1>
+
+<p class="lead">In Korean dining, the main dish rarely eats alone.</p>
+
+<p>Sit down at a Korean table, home-cooked or restaurant, and the first thing that arrives usually isn't the meal itself. It's banchan -- a spread of small side dishes that lands before the main course and stays for the whole meal, refilled without being asked. Seasoned spinach, braised potatoes, pickled radish, a version of kimchi, sometimes half a dozen more. None of it is an appetizer. All of it is the meal.</p>
+
+<h2>What Banchan Actually Is</h2>
+
+<p>Banchan isn't a course, it's a structure. Western dining tends to build a plate around one protein with sides in a supporting role. Korean dining spreads flavor out horizontally instead: a little sour, a little sweet, a little fermented, a little raw, all sitting at the table at once so a bite of rice can go a different direction every time. The point isn't variety for its own sake -- it's balance, built dish by dish rather than seasoned into one.</p>
+
+<p>That's also why banchan is shared and communal rather than plated individually. It's designed to be returned to, topped off, and eaten alongside whatever else is on the table, which makes a Korean meal feel less like a fixed menu and more like an ongoing negotiation between everything in front of you.</p>
+
+<h2>Where Japchae Fits In</h2>
+
+<p>Japchae is one of the most recognizable dishes to come out of that banchan tradition, and one of the easiest to love on first bite: stir-fried glass noodles made from sweet potato starch, tossed with vegetables, often a little beef, and a soy-and-sesame seasoning that lands somewhere between savory and faintly sweet. The noodles themselves are the giveaway -- chewy, glossy, and translucent in a way rice noodles and wheat noodles aren't.</p>
+
+<p>Japchae started out as a royal court dish before it became an everyday staple, which tracks with how it eats today: it's substantial enough to anchor a table but still slots in as one dish among many rather than demanding to be the star. At a gathering, it's just as likely to show up as one option in a spread of banchan as it is to be served on its own.</p>
+
+<h2>A Meal With No Single Hero</h2>
+
+<p>What ties japchae and banchan together isn't the ingredients, it's the philosophy behind how they're served. Neither one is built to dominate a plate. The whole system assumes a good meal comes from several dishes working in relation to each other, not one dish doing all the work. That's a genuinely different way of thinking about what a meal is supposed to do -- and it's a big part of why a Korean table with ten small dishes on it can feel more complete than a plate with one large one.</p>
+
+<a href="/deeper-dive.html" class="back-link">← Back to Deeper Dive</a>
+
+</article>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+<p>© 2026 Don't Be Hangry. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
