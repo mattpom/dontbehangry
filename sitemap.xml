@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://dontbehangry.com/404.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
   <url><loc>https://dontbehangry.com/about.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/regions.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/ingredients.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/techniques.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/markets.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/stories.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/deeper-dive.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/submit.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/privacy.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/terms.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://dontbehangry.com/404.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dontbehangry.com/ceviche-truth.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dontbehangry.com/dashi-built-a-cuisine.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://dontbehangry.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://dontbehangry.com/ingredients.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dontbehangry.com/jollof-wars.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://dontbehangry.com/markets.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dontbehangry.com/nixtamalization.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://dontbehangry.com/privacy.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dontbehangry.com/region-africa.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dontbehangry.com/region-east-asia.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dontbehangry.com/region-europe.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -18,50 +24,13 @@
   <url><loc>https://dontbehangry.com/region-middle-east.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dontbehangry.com/region-south-asia.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dontbehangry.com/region-southeast-asia.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://dontbehangry.com/regions.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://dontbehangry.com/spice-route.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://dontbehangry.com/stories.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://dontbehangry.com/submit.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://dontbehangry.com/techniques.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://dontbehangry.com/terms.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url>
-    <loc>https://dontbehangry.com/feed.xml</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://dontbehangry.com/mole-century-to-perfect.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dontbehangry.com/deeper-dive.html</loc>
-      <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-        </url>
-  <url>
-    <loc>https://dontbehangry.com/clemenzas-spaghetti-sauce-godfather-recipe.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dontbehangry.com/lions-mane-mushrooms.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dontbehangry.com/pappy-van-winkle-bourbon.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dontbehangry.com/what-is-a-latte.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dontbehangry.com/serrano-vs-iberico-ham.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <url><loc>https://dontbehangry.com/feed.xml</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://dontbehangry.com/mole-century-to-perfect.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://dontbehangry.com/clemenzas-spaghetti-sauce-godfather-recipe.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://dontbehangry.com/lions-mane-mushrooms.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://dontbehangry.com/pappy-van-winkle-bourbon.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://dontbehangry.com/what-is-a-latte.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://dontbehangry.com/serrano-vs-iberico-ham.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://dontbehangry.com/the-cheese-store-of-beverly-hills.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
 </urlset>
