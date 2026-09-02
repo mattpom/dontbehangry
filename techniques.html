@@ -81,6 +81,63 @@ footer a{color:var(--saffron);text-decoration:none}
     gtag('config', 'G-921K5JGWGR');
   </script>
 <script src="affiliate-tracking.js" defer></script>
+
+<style id="dbh-page-photo-style">
+  .page-photo {
+    position: relative;
+    width: min(1180px, calc(100% - 5rem));
+    height: clamp(290px, 38vw, 520px);
+    margin: -1px auto 0;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: #151515;
+  }
+  .page-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    filter: saturate(.84) contrast(1.04);
+  }
+  .page-photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 48%, rgba(8,8,8,.83) 100%);
+    pointer-events: none;
+  }
+  .page-photo figcaption {
+    position: absolute;
+    z-index: 1;
+    left: clamp(20px, 4vw, 48px);
+    right: clamp(20px, 4vw, 48px);
+    bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 22px;
+    color: var(--cream);
+  }
+  .page-photo figcaption strong {
+    max-width: 650px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.25rem, 2.4vw, 2.15rem);
+    font-weight: 500;
+    line-height: 1.08;
+  }
+  .page-photo figcaption a {
+    flex-shrink: 0;
+    color: rgba(247,244,238,.7);
+    font-family: 'DM Mono', monospace;
+    font-size: .58rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  @media (max-width: 680px) {
+    .page-photo { width: calc(100% - 2rem); height: 350px; }
+    .page-photo figcaption { align-items: flex-start; flex-direction: column; gap: 9px; }
+  }
+</style>
 </head>
 <body>
 <nav>
@@ -104,6 +161,13 @@ footer a{color:var(--saffron);text-decoration:none}
   <h1 class="page-title"><em>Techniques</em></h1>
   <p class="page-sub">The methods that define cuisines. Not how-to guides — the stories behind why certain techniques exist and what they changed.</p>
 </div>
+<figure class="page-photo">
+  <img src="https://images.unsplash.com/photo-1768806470347-0d336287d6b8?auto=format&amp;fit=crop&amp;w=1600&amp;q=82" alt="A cook working over flames at a Bangkok street-food stall" width="1600" height="1000" loading="eager">
+  <figcaption>
+    <strong>Technique is culture made visible.</strong>
+    <a href="https://unsplash.com/photos/gGeo3g-zUgw" target="_blank" rel="noopener">Photo: Jeffrey van Rossum / Unsplash</a>
+  </figcaption>
+</figure>
 <div class="main">
   <div class="sec-label">Featured Techniques</div>
   <div class="card-grid">
