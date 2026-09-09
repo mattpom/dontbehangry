@@ -41,6 +41,7 @@ nav{position:sticky;top:0;z-index:500;display:flex;align-items:center;justify-co
 .nav-submit:hover{background:var(--saffron)!important;color:var(--black)!important}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .hamburger span{display:block;width:22px;height:2px;background:var(--warm);border-radius:2px}
+.mobile-deeper{display:none;color:var(--saffron);border:1px solid var(--saffron);padding:.45rem .65rem;text-decoration:none;font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;margin-left:auto}
 
 /* HERO */
 .hero{display:grid;grid-template-columns:55% 45%;min-height:90vh;border-bottom:1px solid var(--border)}
@@ -136,6 +137,7 @@ footer a{color:var(--saffron);text-decoration:none}
 nav{padding:1rem 1.5rem}
 .nav-links{display:none}
 .nav-links.open{display:flex;flex-direction:column;position:fixed;top:60px;left:0;right:0;background:#0a0806;border-bottom:1px solid var(--border);padding:1.5rem;gap:1rem;z-index:9000}
+.mobile-deeper{display:block}
 .hamburger{display:flex}
 .section{padding:3rem 1.5rem}
 .email-section{padding:3rem 1.5rem}
@@ -263,6 +265,7 @@ gtag('config', 'G-921K5JGWGR');
 <li><a href="about.html">About</a></li>
 <li><a href="deeper-dive.html">Deeper Dive</a></li><li><a href="submit.html" class="nav-submit">Submit a Dish</a></li>
 </ul>
+<a class="mobile-deeper" href="deeper-dive.html">Deeper Dive</a>
 <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
 <span></span><span></span><span></span>
 </button>
