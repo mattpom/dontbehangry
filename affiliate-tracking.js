@@ -10,6 +10,12 @@
     'shop-books-momofuku': 'https://www.amazon.com/s?k=Momofuku+David+Chang+cookbook&tag=dontbehangry-20'
   };
 
+  // Repair the legacy Shop GA4 typo without replacing the large HTML file.
+  // The page loads G-921K5JGWGR but historically configured G-921K5JhGWGR.
+  if (window.location.pathname === '/shop.html' && typeof window.gtag === 'function') {
+    window.gtag('config', 'G-921K5JGWGR');
+  }
+
   // Repair legacy Shop links by their stable placement IDs. Search destinations are
   // intentionally used instead of guessing an ASIN that has not been independently verified.
   Object.keys(SHOP_DESTINATIONS).forEach(function (position) {
