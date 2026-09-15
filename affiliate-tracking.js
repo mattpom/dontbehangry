@@ -26,7 +26,21 @@
   document.querySelectorAll('[data-retired-affiliate="true"]').forEach(function (card) {
     card.style.cursor = 'default';
     var label = card.querySelector('.product-link, .amz-link, .related-btn');
-    if (label) label.textContent = 'Product link under review';
+    if (label) label.textContent = 'View recommendation';
+
+    // A retired placement that now points to our own content is editorial navigation,
+    // not a sponsored merchant click. Keep it useful while removing stale semantics.
+    if (card.tagName === 'A') {
+      try {
+        var destination = new URL(card.href, window.location.href);
+        if (destination.origin === window.location.origin) {
+          card.removeAttribute('target');
+          card.removeAttribute('rel');
+        }
+      } catch (e) {
+        // Do not rewrite a destination we cannot safely parse.
+      }
+    }
   });
 
   document.addEventListener('click', function (event) {
