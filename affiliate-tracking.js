@@ -6,7 +6,7 @@
   });
 
   document.addEventListener('click', function (event) {
-    var link = event.target.closest('a[href*="amazon.com/dp/"],a[href*="amazon.com/gp/product/"]');
+    var link = event.target.closest('a[href*="amazon.com/"]');
     if (!link || typeof window.gtag !== 'function') return;
     var asinMatch = link.href.match(/\/(?:dp|gp\/product)\/([A-Z0-9]{10})/i);
     window.gtag('event', 'amazon_outbound_click', {
