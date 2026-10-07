@@ -4,7 +4,7 @@ Domain: dontbehangry.com. Repo: mattpom/dontbehangry.
 
 ## Identity
 
-A food journalism site, explicitly not a recipe site, restaurant guide, or ranking list: food journalism without the pretension. Focused on the cultural and historical story behind dishes and ingredients.
+A food publication about culture, history and practical cooking: food journalism without the pretension. Stories remain central, with practical food guides and selected recipes alongside them.
 
 ## Voice and Tone
 
@@ -24,7 +24,7 @@ Regions, Ingredients, Techniques, Markets, Stories, Shop, About, Deeper Dive, Su
 
 ## Layout Patterns
 
-The site uses a region-first browsing structure (East Asia, South Asia, Mediterranean, and similar regions) instead of standard blog categories. Numbered featured story cards carry country and theme tags. A moving ticker of dish names runs as a design motif. An explicit "we are not, we are" manifesto block sits near the top of the homepage.
+The site uses a region-first browsing structure (East Asia, South Asia, Mediterranean, and similar regions) instead of standard blog categories. Numbered featured story cards carry country and theme tags. A moving ticker of dish names runs as a design motif. A short editorial manifesto sits near the top of the homepage. Describe the current mix of stories, practical guides and selected recipes accurately.
 
 ## Deeper Dive
 
